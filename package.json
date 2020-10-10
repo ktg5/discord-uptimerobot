@@ -1,0 +1,19 @@
+{
+  "name": "discord-uptimerobot",
+  "version": "1.0.0",
+  "description": "https://github.com/kt5company/discord-uptimerobot",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon bot.js",
+    "startdev": "node bot.js"
+  },
+  "author": "ktg5",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.6.4",
+    "nodemon": "^2.0.4",
+    "uptime-robot": "^1.3.0",
+    "winston": "^2.4.4"
+  }
+}

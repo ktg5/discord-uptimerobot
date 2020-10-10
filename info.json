@@ -1,0 +1,13 @@
+{
+    "ver": "1.0",
+    "build-number": "Release 1",
+    "build-name": "Version 1.0",
+    "DMS": true,
+    "CMDS": true,
+    "special_ids": [
+        {
+            "ownerID1": "OWNER DISCORD ID HERE"
+        }
+    ],
+    "prefix": "YOUR PREFIX HERE"
+}
