@@ -51,6 +51,9 @@ function emojiMsg(arg) {
     case `0`:
       a = ":pause_button:";
     break;
+    default:
+      a = `:grey_question:`
+    break;
   }
   return a;
 }
@@ -70,6 +73,9 @@ function monitorStatus(arg) {
     break;
     case `0`:
       a = `Monitor paused`;
+    break;
+    default:
+      a = `Unknown`
     break;
   }
   return a;
@@ -93,6 +99,9 @@ function monitorType(arg) {
     break;
     case `19132`:
       a = `Minecraft Bedrock Server (Port 19132)`;
+    break;
+    default:
+      a = `Not stated`
     break;
   }
   return a;
