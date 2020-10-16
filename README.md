@@ -11,7 +11,7 @@ A Discord bot that uses UptimeRobot to detect if a service is down or not.
 5. Open `info.json` with any text editor and...
 5a. Replace `YOUR PREFIX HERE` with the prefix you'll be using to trigger the bot.
 5b. Replace `OWNER DISCORD ID HERE` with your Discord user ID.
-6. When you have everything configured, run `npm start` in the terminal/command prompt you used to run the `npm i` command.
+6. When you have everything configured, run `npm start` in your terminal/command prompt.
 7. Invite the Discord bot to your server and use `(prefix)ping` to make sure it's running.
 
 ## Adding monitors.
