@@ -1,7 +1,7 @@
 {
-    "ver": "1.0.1",
-    "build-number": "Release 2",
-    "build-name": "Version 1.0.1",
+    "ver": "1.0.2",
+    "build-number": "Release 1.0.2",
+    "build-name": "Version 1.0.2",
     "DMS": true,
     "CMDS": true,
     "special_ids": [
