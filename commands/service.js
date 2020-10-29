@@ -142,7 +142,9 @@ module.exports.run = async (bot, message, args) => {
             .setFooter(`Uptime detection by UptimeRobot.`)
             .setColor(monitColor)
           channelmsg.send({embed});
+
           // Log to console
+          logger.info(`----------------------------------------------`)
           logger.info(`${monitor.friendlyname} was tested by ${usernameMSG} on ${guildmsg.name}.`)
           logger.info(`Status: ${monitStatus} | Today's uptime %: ${monitor.customuptimeratio[0]}`)
         break;

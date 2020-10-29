@@ -1,3 +1,4 @@
+// Modules
 var Discord = require('discord.js');
 var bot = new Discord.Client();
 bot.commands = new Discord.Collection();
@@ -9,6 +10,7 @@ var logger = require('winston');
 const botInfo = require(`./info.json`);
 const botTools = require(`./custom-modules/tools`);
 
+// Bot prefix (DEFINE IN "info.json")
 var prefix = botInfo.prefix;
 
 // Configure logger settings
@@ -44,6 +46,7 @@ bot.on('ready', function (evt) {
     logger.info(bot.user.tag);
     logger.info('Online and ready!')
 
+    // Set bot status
     bot.user.setStatus('available')
     setInterval(() => {
         var messages = [
@@ -69,6 +72,7 @@ bot.on(`message`, function (message) {
         
         let commandfile = bot.commands.get(cmd);
 
+        // Run commands within the folder "commands"
         if (commandfile) {
             commandfile.run(bot, message, args);
         }

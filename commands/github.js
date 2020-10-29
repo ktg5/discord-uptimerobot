@@ -22,7 +22,6 @@ module.exports.run = async (bot, message, args) => {
         .setColor(randomColor)
         .addField('GitHub link.', `[Click here to visit the code!](https://github.com/kt5company/discord-uptimerobot/)`)
     channelmsg.send({embed});
-    logger.info(`${Math.round(bot.ping)} ping, tested on ${guildmsg.name} by ${message.author.tag}`)
 }
  
 module.exports.help = {
