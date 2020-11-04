@@ -19,5 +19,5 @@ Open `commands/service.js` with any text editor and view the example
 
 ### New things in 1.1!
 * Disable and enable commands.
-* Added custom modules to all commands.
+* Mentioning the bot for bot info such as version, prefix, and server count.
 * Fixed some stupid bugs.
