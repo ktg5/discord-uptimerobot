@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 var logger = require('winston');
 const botTools = require('../custom-modules/tools')
-const botInfo = require(`./info.json`);
+const botInfo = require(`../info.json`);
 
 module.exports.run = async (bot, message, args) => {
     // Shortcuts
