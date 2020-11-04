@@ -1,4 +1,4 @@
-# Discord + UptimeRobot bot.
+# Discord + UptimeRobot bot. (Version 1.1)
 A Discord bot that uses UptimeRobot to detect if a service is down or not.
 
 ## Installation process.
@@ -16,3 +16,8 @@ A Discord bot that uses UptimeRobot to detect if a service is down or not.
 
 ## Adding monitors.
 Open `commands/service.js` with any text editor and view the example 
+
+### New things in 1.1!
+* Disable and enable commands.
+* Added custom modules to all commands.
+* Fixed some stupid bugs.

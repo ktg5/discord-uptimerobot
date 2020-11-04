@@ -1,6 +1,6 @@
 {
   "name": "discord-uptimerobot",
-  "version": "1.0.0",
+  "version": "1.1",
   "description": "https://github.com/kt5company/discord-uptimerobot",
   "main": "bot.js",
   "scripts": {

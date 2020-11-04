@@ -1,14 +1,8 @@
 const Discord = require("discord.js");
 var logger = require('winston');
-
-var special_ids = {
-    ownerID1: 184070212012736512,
-    ownerID2: 184068065594572801,
-    CupheadID: 244944893317873666,
-    ServerHostALT: 474219060721221693
-};
-
 const botTools = require('../custom-modules/tools')
+const botInfo = require(`./info.json`);
+
 module.exports.run = async (bot, message, args) => {
     // Shortcuts
     var channelmsg = message.channel;
