@@ -119,11 +119,11 @@ module.exports.run = async (bot, message, args) => {
 
     cl.getMonitors({customUptimeRatio: [1, 7, 30]}, function (err, res) {
       if (err) throw err;
-      // Use this to find your monitor's ID.
+      // !!! Use the command below to find your monitor's ID, it will show information about all of your monitors.
       // console.dir(res);
 
       switch (args[1]) {
-        // EXAMPLE:
+        // EXAMPLE (Make sure to edit me!)
         case `example`:
           // Find our information we need
           var monitor = findMonitor(res, "monitor-ID");
