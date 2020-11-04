@@ -66,6 +66,26 @@ bot.on(`message`, function (message) {
     if (bot.user.id === message.author.id) {return}
     if (message.author.bot == true) return;
 
+    // If someone mention me
+    if (message.isMentioned(bot.user)) {
+        var embed = new Discord.RichEmbed()
+            .setColor(0x6f3ba5)
+            .setTitle(`${bot.user.username}`) // Bot username.
+            .addField(`Bot prefix:`, `\`${prefix}\``) // Bot prefix (duh).
+            .addField(`Servers:`, `\`${bot.guilds.size}\``) // How many servers the bot is in.
+            .addField(`Commands enabled?`, `\`${botInfo.CMDS}\``) // Status of commands.
+            .addField(`*Uptime (from last reload)*`, `${botUptime()}`) // Gets bot's uptime from last reload.
+            .setFooter(`${bot.user.username} ${botInfo.ver} build ${botInfo["build-number"]}`) // Bot username, version, and build.
+            .setThumbnail(bot.user.avatarURL)
+        message.channel.send({embed});
+
+        logger.info(`The user, ${message.author.tag} has mentioned me on ${message.guild.name}.`)
+        logger.info(`Bot prefix: ${prefix}`)
+        logger.info(`Servers: ${bot.guilds.size}`) // How many servers the bot is in.
+        logger.info(`CMDS status: ${botInfo.CMDS}`)
+        logger.info(`Uptime: ${botUptime()}`)
+    }
+
     if (message.content.substring(0, 3) == prefix) {
         var args = message.content.substring(3).split(' ');
         var cmd = args[0];
