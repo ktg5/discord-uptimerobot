@@ -124,15 +124,15 @@ module.exports.run = async (bot, message, args) => {
 
       switch (args[1]) {
         // EXAMPLE (Make sure to edit me!)
-        case `example`:
-          // Find our information we need
+        case `example`: // Replace "example" with the name of this sub-command after the main command.
+          // Find our information we need -- these go to our functions we made at the top of this code.
           var monitor = findMonitor(res, "monitor-ID");
           var monitStatus = monitorStatus(monitor.status);
           var monitColor = embedColor(monitor.status);
           var emojiStatus = emojiMsg(monitor.status);
           var monitType = monitorType(monitor.port);
 
-          // Create the discord message
+          // Create the discord message.
           var embed = new Discord.RichEmbed()
             .setTitle(`${emojiStatus} ${monitor.friendlyname}`)
             .addField(`Type:`, monitType)
@@ -143,7 +143,7 @@ module.exports.run = async (bot, message, args) => {
             .setColor(monitColor)
           channelmsg.send({embed});
 
-          // Log to console
+          // Log to console about the ommand being used.
           logger.info(`----------------------------------------------`)
           logger.info(`${monitor.friendlyname} was tested by ${usernameMSG} on ${guildmsg.name}.`)
           logger.info(`Status: ${monitStatus} | Today's uptime %: ${monitor.customuptimeratio[0]}`)
