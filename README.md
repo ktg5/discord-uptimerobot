@@ -1,4 +1,4 @@
-# Discord + UptimeRobot bot. `Version 1.1.3`
+# Discord + UptimeRobot sample bot. `Version 1.1.3`
 A Discord bot that uses UptimeRobot to detect if a service is down or not.
 
 ## Installation process.
