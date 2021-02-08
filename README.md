@@ -8,8 +8,8 @@ A Discord bot that uses UptimeRobot to detect if a service is down or not.
 3a. Replace `DISCORD TOKEN HERE` with your Discord bot's token.
 3b. Replace `UPTIMEROBOT TOKEN HERE` with your UptimeRobot account's token.
 4. Open `info.json` with any text editor and...
-4a. Replace `YOUR PREFIX HERE` with the prefix you'll be using to trigger the bot.
-4b. Replace `OWNER DISCORD ID HERE` with your Discord user ID.
+4a. Replace `YOUR DISCORD ID HERE` with your Discord user ID.
+4b. Replace `YOUR PREFIX HERE` with the prefix you'll be using to trigger the bot.
 5. When you have everything configured, run `npm start` in your terminal/command prompt.
 6. Invite the Discord bot to your server and use `(prefix)ping` to make sure it's running.
 
