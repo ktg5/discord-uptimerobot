@@ -1,0 +1,8 @@
+{
+  "monitors": [
+    {
+      "name": "monitor-name",
+      "value": "monitor-value"
+    }
+  ]
+}

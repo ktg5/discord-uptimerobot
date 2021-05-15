@@ -1,17 +1,25 @@
 {
-  "name": "discord-uptimerobot",
+  "name": "ktg5s-downtracker",
   "version": "1.0.0",
-  "description": "https://github.com/kt5company/discord-uptimerobot",
+  "description": "ktg5's downtracker bot that keeps people up-to-date about KT5 Company services.",
   "main": "bot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon bot.js",
     "startdev": "node bot.js"
   },
+  "nodemonConfig": {
+    "verbose": "true",
+    "ignore": [
+      "data/*",
+      "db.json"
+    ]
+  },
   "author": "ktg5",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.6.4",
+    "discord.js": "^12.5.3",
+    "lowdb": "^1.0.0",
     "nodemon": "^2.0.4",
     "uptime-robot": "^1.3.0",
     "winston": "^2.4.4"

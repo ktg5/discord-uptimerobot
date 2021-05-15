@@ -36,5 +36,106 @@ module.exports = {
     
     getRandomArbitrary: function(min, max) {
         return Math.floor(Math.random() * (max - min)) + min;
-    },    
+    },
+    
+    // Find the very cool monitor.
+    findMonitor: function(monitors, lookID) {
+    var a = null;
+    for (var i = 0; i < monitors.length; i++) {
+      if (monitors[i].id == lookID) {
+        var a = monitors[i]
+        return a;
+      }
+    }
+  },
+  
+  // Color to use for our embed message.
+  embedColor: function(arg) {
+    var a = null;
+    // Switch statements are cool!
+    switch(arg) {
+      case `9`:
+        a = 0xFF0000;
+      break;
+      case `2`:
+        a = 0x00FF00;
+      break;
+      case `0`:
+        a = 0x000000;
+      break;
+    }
+    return a;
+  },
+  
+  // Get a cool emoji to use in our embed message.
+  emojiMsg: function(arg) {
+    var a = null;
+    switch(arg) {
+      case `9`:
+        a = ":red_circle:";
+      break;
+      case `2`:
+        a = ":green_circle:";
+      break;
+      case `0`:
+        a = ":hourglass:";
+      break;
+      case `0`:
+        a = ":pause_button:";
+      break;
+      default:
+        a = `:grey_question:`
+      break;
+    }
+    return a;
+  },
+  
+  // Finding what our monitor status is.
+  monitorStatus: function(arg) {
+    var a = null;
+    switch (arg) {
+      case `9`:
+        a = `Down`;
+      break;
+      case `2`:
+        a = `Up`;
+      break;
+      case `1`:
+        a = `Monitor restarting`;
+      break;
+      case `0`:
+        a = `Monitor paused`;
+      break;
+      default:
+        a = `Unknown`
+      break;
+    }
+    return a;
+  },
+  
+  // Definding what our monitor is.
+  monitorType: function(arg) {
+    var a = null;
+    switch (arg) {
+      case ``:
+        a = `Website (Port 80)`;
+      break;
+      case `80`:
+        a = `Website (Port 80)`;
+      break;
+      case `8080`:
+        a = `Sub-website (Port 8080)`;
+      break;
+      case `25565`:
+        a = `Minecraft Server (Port 25565)`;
+      break;
+      case `19132`:
+        a = `Minecraft Bedrock Server (Port 19132)`;
+      break;
+      default:
+        a = `Not stated`
+      break;
+    }
+    return a;
+  },
 }

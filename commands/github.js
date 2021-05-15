@@ -12,9 +12,9 @@ module.exports.run = async (bot, message, args) => {
     // ######################################################################################################################
 
     var randomColor = Math.floor(Math.random()*16777215).toString(16);
-    var embed = new Discord.RichEmbed()
+    var embed = new Discord.MessageEmbed()
         .setColor(randomColor)
-        .addField('GitHub link.', `[Click here to visit the code!](https://github.com/kt5company/discord-uptimerobot/)`)
+        .addField('GitHub link.', `[Click here to visit the source-code!](https://github.com/kt5company/discord-uptimerobot/)`)
     channelmsg.send({embed});
 }
  
