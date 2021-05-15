@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
     var randomColor = Math.floor(Math.random()*16777215).toString(16);
     var embed = new Discord.MessageEmbed()
         .setColor(randomColor)
-        .addField('**:ping_pong:**', `**${Math.round(bot.ping)}ms**`)
+        .addField('**:ping_pong:**', `**${Math.round(bot.ws.ping)}ms**`)
     channelmsg.send({embed});
     logger.info(`${Math.round(bot.ping)} ping, tested on ${guildmsg.name} by ${message.author.tag}`)
 }
