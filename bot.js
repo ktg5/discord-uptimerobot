@@ -102,7 +102,7 @@ bot.on('ready', function (evt) {
                 var embed = new Discord.MessageEmbed()
                     .setColor(randomColor())
                     .setTitle(`ｰｰｰｰｰｰｰｰｰｰ✄ｰｰｰｰｰｰｰｰｰｰ`)
-                channelmsg.send({embed});
+                message.channel.send({embed});
             } else return 
         } else return
     }, 300000); // You can change the time for how much it'll be until the bot posts another status update here.
