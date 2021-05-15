@@ -100,7 +100,7 @@ bot.on('ready', function (evt) {
                 }
                 
                 var embed = new Discord.MessageEmbed()
-                    .setColor(randomColor)
+                    .setColor(randomColor())
                     .setTitle(`ｰｰｰｰｰｰｰｰｰｰ✄ｰｰｰｰｰｰｰｰｰｰ`)
                 channelmsg.send({embed});
             } else return 
