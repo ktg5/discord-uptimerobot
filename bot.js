@@ -30,6 +30,12 @@ logger.level = 'debug';
 var getDateTime = new Date().toLocaleString();
 
 
+// RandomColor function
+function randomColor() {
+    return Math.floor(Math.random()*16777215).toString(16);
+}
+
+
 // Find commands (/commands folder)
 fs.readdir("./commands/", (err, files) => {
     if(err) console.log(err);
