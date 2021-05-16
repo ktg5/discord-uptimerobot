@@ -31,7 +31,7 @@ In the "db.json" file, in the `"name"` value the monitor whatever you like becau
 
 You can now change the example case name in the `service` command to use when you want to look at the information for that monitor.
 
-If you wanted to add more monitors, repeat the 2nd part of this process, copy the lines 3-6 in `data.json` and make sure to change the `"value"` to your other monitor ID, and copy the lines 26-50 in `commands/service.js` and make sure to change the case name to something different and change the `monitorlist[1].value` to `monitorlist[2].value`; the more you add, the higher the number is.
+If you wanted to add more monitors, repeat the 2nd part of this process, copy the lines 3-6 in `data.json` and make sure to change the `"value"` to your other monitor ID, and copy the lines 26-50 in `commands/service.js` and make sure to change the case name to something different and change the `monitorlist[0].value` to `monitorlist[1].value`; the more you add, the higher the number is.
 
 ## Questions or need help?
 
