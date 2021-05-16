@@ -28,7 +28,7 @@ module.exports.run = async (bot, message, args, db) => {
           // 
           // Monitors are defined in "data/db.json", for every monitor -- there should be another list in the collection.
           // See the README.md for more information.
-          var monitor = botTools.findMonitor(res, monitorlist[1].value);
+          var monitor = botTools.findMonitor(res, monitorlist[0].value);
           var monitStatus = botTools.monitorStatus(monitor.status);
           var monitColor = botTools.embedColor(monitor.status);
           var emojiStatus = botTools.emojiMsg(monitor.status);
