@@ -2,7 +2,8 @@
   "monitors": [
     {
       "name": "monitor-name",
-      "value": "monitor-value"
+      "value": "monitor-value",
+      "stopped": false
     }
   ]
 }
