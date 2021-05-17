@@ -73,12 +73,66 @@ bot.on('ready', function (evt) {
                 var targetGuild = bot.guilds.cache.get(botInfo.guild);
                 var targetChannel = targetGuild.channels.cache.get(botInfo.channel);
 
-                // See all monitor data
-                // console.log(Monitors.getAllMonitors(db))
-
                 // Find monitors.
                 var monitorlist = Monitors.getAllMonitors(db)
 
+                // Delete old messages.
+                targetChannel.bulkDelete(monitorlist.length)
+
+                logger.info(`ｰｰｰｰｰｰｰｰｰｰ✄ｰｰｰｰｰｰｰｰｰｰ`);
+                logger.info(`5 minute status check:`)
+                logger.info(`Date & time: ${getDateTime}`)
+
+                // Check to see if a monitor is down or paused and report about it.
+                for(var i = 0; i < monitorlist.length; i++) {
+                    await cl.getMonitors({customUptimeRatio: [1, 7, 30]}).then((res) => {
+                        var monitor = botTools.findMonitor(res, monitorlist[i].value);
+                        var monitStatus = botTools.monitorStatus(monitor.status);
+                        var monitColor = botTools.embedColor(monitor.status);
+                        var emojiStatus = botTools.emojiMsg(monitor.status);
+                        var monitType = botTools.monitorType(monitor.port);
+                        
+                        switch (monitor.status) {
+                            case "9": 
+                                if (monitorlist[i].stopped == true) {
+                                    return;
+                                } else {
+                                    var embed = new Discord.MessageEmbed()
+                                        .setTitle(`${emojiStatus} ${monitor.friendlyname} is down.`)
+                                        .addField(`Type:`, monitType)
+                                        .addField(`URL:`, monitor.url)
+                                        .addField(`Status:`, monitStatus)
+                                        .addField(`Today's uptime percentage:`, `${monitor.customuptimeratio[0]}%`)
+                                        .setFooter(`Uptime detection by UptimeRobot.`)
+                                        .setColor(monitColor)
+                                    targetChannel.send({embed});
+
+                                    monitorlist[i].stopped = true;
+                                }
+                            break;
+
+                            case "0":
+                                if (monitorlist[i].stopped == false) {
+                                    return;
+                                } else {
+                                    var embed = new Discord.MessageEmbed()
+                                        .setTitle(`${emojiStatus} ${monitor.friendlyname} is paused.`)
+                                        .addField(`Type:`, monitType)
+                                        .addField(`URL:`, monitor.url)
+                                        .addField(`Status:`, monitStatus)
+                                        .addField(`Today's uptime percentage:`, `${monitor.customuptimeratio[0]}%`)
+                                        .setFooter(`Uptime detection by UptimeRobot.`)
+                                        .setColor(monitColor)
+                                    targetChannel.send({embed});
+
+                                    monitorlist[i].stopped = false;
+                                }
+                            break;
+                        }
+                    });
+                }
+
+                // Run the 5 minute checker.
                 for(var i = 0; i < monitorlist.length; i++) {
                     await cl.getMonitors({customUptimeRatio: [1, 7, 30]}).then((res) => {
                         var monitor = botTools.findMonitor(res, monitorlist[i].value);
@@ -96,15 +150,13 @@ bot.on('ready', function (evt) {
                             .setFooter(`Uptime detection by UptimeRobot.`)
                             .setColor(monitColor)
                         targetChannel.send({embed});
+
+                        logger.info(`Monitor #${i + 1}: ${monitor.friendlyname}`)
+                        logger.info(`Status: ${monitStatus} | Today's uptime %: ${monitor.customuptimeratio[0]}`)
                     });
                 }
-                
-                var embed = new Discord.MessageEmbed()
-                    .setColor(randomColor())
-                    .setTitle(`ｰｰｰｰｰｰｰｰｰｰ✄ｰｰｰｰｰｰｰｰｰｰ`)
-                channelmsg.send({embed});
             } else return 
-        } else return
+        } else return 
     }, 300000); // You can change the time for how much it'll be until the bot posts another status update here.
 
     setInterval(() => {

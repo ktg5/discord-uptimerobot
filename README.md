@@ -1,4 +1,4 @@
-# Discord + UptimeRobot sample bot. `Version 2.0`
+# Discord + UptimeRobot sample bot. `Version 2.1`
 A Discord bot that uses UptimeRobot to detect if a service is down or not.
 
 ## For those who are updating to v2 of this repo, PLEASE REDO THE INSTALLATION PROCESS BELOW.
@@ -13,7 +13,7 @@ Part 1 -- Getting started:
 4. Open `info.json` with any text editor and...
 4a. Replace `YOUR DISCORD ID HERE` with your Discord user ID.
 4b. Replace `YOUR PREFIX HERE` with the prefix you'll be using to trigger the bot.
-(Optional for those who would like monitor reporting) 4c. Change the values in `"guild"` to your chosen guild ID and `"channel"`to your chosen channel ID.
+(Optional for those who would like "auto-monitor-reporting") 4c. Change the values in `"guild"` to your chosen guild ID and `"channel"`to your chosen channel ID.
 5. When you have everything configured, run `npm start` in your terminal/command prompt.
 6. Invite the Discord bot to your server and use `(prefix)ping` to make sure it's running.
 
@@ -31,8 +31,11 @@ In the "db.json" file, in the `"name"` value the monitor whatever you like becau
 
 You can now change the example case name in the `service` command to use when you want to look at the information for that monitor.
 
-If you wanted to add more monitors, repeat the 2nd part of this process, copy the lines 3-6 in `data.json` and make sure to change the `"value"` to your other monitor ID, and copy the lines 26-50 in `commands/service.js` and make sure to change the case name to something different and change the `monitorlist[1].value` to `monitorlist[2].value`; the more you add, the higher the number is.
+If you wanted to add more monitors, repeat the 2nd part of this process, copy the lines 3-6 in `data.json` and make sure to change the `"value"` to your other monitor ID, and copy the lines 26-50 in `commands/service.js` and make sure to change the case name to something different and change the `monitorlist[0].value` to `monitorlist[1].value`; the more you add, the higher the number is.
+
+## What's new in v 2.1?
+* Deletes old "auto-monitor-reporting" messages.
+* Fixed bugs.
 
 ## Questions or need help?
-
 [Join our support server!](https://discord.gg/8QTX46D)
