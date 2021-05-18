@@ -19,22 +19,15 @@ A Discord bot that uses UptimeRobot to detect if a service is down or not.
 
 ### Part 2 -- Setting up monitors: (VERY IMPORTANT)
 Since v2, monitors are now defined in `data/db.json`. For every monitor -- there should be another list in the collection.
-
 If you look in the `commands/service.js` script, you will see an "example monitor".
 
-
 First you must find the number for the monitor.
-
 Go to line 24 and uncomment the line.
-
 Save the file and run the command without any args.
 
 Check your console and you should see a list of monitors from your UptimeRobot account.
-
 Find the monitor ID you would like to use for this example, it will be above the monitor's `"friendlyname"`.
-
 In the "db.json" file, in the `"name"` value the monitor whatever you like because it doesn't really matter. But in the `"value"` value, enter in your monitor ID.
-
 
 You can now change the example case name in the `service` command to use when you want to look at the information for that monitor.
 
