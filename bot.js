@@ -65,6 +65,15 @@ bot.on('ready', function (evt) {
     logger.info(`Reloaded at ${getDateTime}`)
     bot.user.setStatus('available')
 
+    // - USE FOR DEBUG -
+    // Use this to find your monitor's ID.
+    // cl.getMonitors({customUptimeRatio: [1, 7, 30]}).then((res) => {
+    //     console.dir(res);
+    // })
+
+    // See all monitor data from 'data/db.json'
+    // console.log(Monitors.getAllMonitors(db))
+
     setInterval(async () => {
         // !!! If the channel defined in "info.json" is not set to defaults (null).
         if (botInfo.guild !== null) {

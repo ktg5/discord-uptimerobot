@@ -19,9 +19,6 @@ module.exports.run = async (bot, message, args, db) => {
     // ######################################################################################################################
 
     await cl.getMonitors({customUptimeRatio: [1, 7, 30]}).then((res) => {
-      // Use this to find your monitor's ID.
-      // console.dir(res);
-
       switch (args[1]) {
         case `example`:
           // Example monitor

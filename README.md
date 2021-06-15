@@ -26,8 +26,8 @@ Since v2, monitors are now defined in `data/db.json`. For every monitor -- there
 If you look in the `commands/service.js` script, you will see an "example monitor".
 
 First you must find the number for the monitor.
-Go to line 24 and uncomment the line.
-Save the file and run the command without any args.
+Go to `bot.js` and uncomment the lines 70-72.
+Save the file and run the bot.
 
 Check your console and you should see a list of monitors from your UptimeRobot account.
 Find the monitor ID you would like to use for this example, it will be above the monitor's `"friendlyname"`.
