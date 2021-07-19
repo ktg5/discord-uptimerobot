@@ -210,6 +210,8 @@ bot.on(`message`, function (message) {
 
     // If someone mention me
     if (message.mentions.has(bot.user)) {
+        if (message.content.includes("@here") || message.content.includes("@everyone")) return false;
+        
         var embed = new Discord.MessageEmbed()
             .setColor(0x6f3ba5)
             .setTitle(`${bot.user.username}`) // Bot username.
