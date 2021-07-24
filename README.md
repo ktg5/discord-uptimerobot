@@ -25,7 +25,7 @@ This does require you to have a UptimeRobot account and setup monitors on your U
 Since v2, monitors are now defined in `data/db.json`. For every monitor -- there should be another list in the collection.
 If you look in the `commands/service.js` script, you will see an "example monitor".
 
-First you must find the number for the monitor.
+First you must find ID number of the monitor.
 Go to `bot.js` and uncomment the lines 70-72.
 Save the file and run the bot.
 
