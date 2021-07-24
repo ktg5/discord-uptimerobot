@@ -1,3 +1,5 @@
+const monitor = require("./monitor");
+
 module.exports = {
     getDateTime: function() {
         var date = new Date();
@@ -114,9 +116,9 @@ module.exports = {
   },
   
   // Definding what our monitor is.
-  monitorType: function(arg) {
+  monitorType: function(port, type) {
     var a = null;
-    switch (arg) {
+    switch (port) {
       case ``:
         a = `Website (Port 80)`;
       break;
@@ -136,6 +138,15 @@ module.exports = {
         a = `Not stated`
       break;
     }
+    switch (type) {
+      case `3`:
+        a = "[ping] " + a
+      break;
+      case `1`:
+        a = "[http] " + a
+      break;
+    }
+    console.log(a)
     return a;
   },
 }

@@ -29,7 +29,7 @@ module.exports.run = async (bot, message, args, db) => {
           var monitStatus = botTools.monitorStatus(monitor.status);
           var monitColor = botTools.embedColor(monitor.status);
           var emojiStatus = botTools.emojiMsg(monitor.status);
-          var monitType = botTools.monitorType(monitor.port);
+          var monitType = botTools.monitorType(monitor.port, monitor.type);
           
           var embed = new Discord.MessageEmbed()
             .setTitle(`${emojiStatus} ${monitor.friendlyname}`)
