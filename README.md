@@ -8,7 +8,7 @@ This does require you to have a UptimeRobot account and setup monitors on your U
 ## Installation process.
 ### Part 1 -- Getting started:
 1. Download the source by using `git clone https://github.com/kt5company/discord-uptimerobot` in a command prompt that has Git installed.
-2. Make sure you have [Node.js + npm](https://nodejs.org/en/) installed and run `npm i` inside the folder.
+2. Make sure you have [Node.js + npm](https://nodejs.org/en/) (node.js v12+) installed and run `npm i` inside the folder.
 3. Open `auth.json` with any text editor and...
 3a. Replace `DISCORD TOKEN HERE` with your Discord bot's token.
 3b. Replace `UPTIMEROBOT TOKEN HERE` with your UptimeRobot account's token.
