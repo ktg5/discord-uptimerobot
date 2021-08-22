@@ -14,7 +14,8 @@ module.exports.run = async (bot, message, args) => {
     var randomColor = Math.floor(Math.random()*16777215).toString(16);
     var embed = new Discord.MessageEmbed()
         .setColor(randomColor)
-        .addField('GitHub link.', `[Click here to visit the source-code!](https://github.com/kt5company/discord-uptimerobot/)`)
+        .setTitle(`This bot is powered by an open source project made by ktg5 under KT5 Company.`)
+        .addField('GitHub link.', `[Click here to visit the base code for this bot!](https://github.com/kt5company/discord-uptimerobot/)`)
     channelmsg.send({embed});
 }
  

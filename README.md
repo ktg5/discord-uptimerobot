@@ -1,4 +1,4 @@
-# Discord + UptimeRobot sample bot. `Version 2.1`
+# Discord + UptimeRobot sample bot. `Version 2.1.1`
 A Discord bot that uses UptimeRobot to detect if a service is down or not.
 
 This does require you to have a UptimeRobot account and setup monitors on your UptimeRobot account.

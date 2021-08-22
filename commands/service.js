@@ -36,14 +36,14 @@ module.exports.run = async (bot, message, args, db) => {
             .addField(`Type:`, monitType)
             .addField(`URL:`, monitor.url)
             .addField(`Status:`, monitStatus)
-            .addField(`Today's uptime percentage:`, `${monitor.customuptimeratio[0]}%`)
-            .setFooter(`Uptime detection by UptimeRobot.`)
+            .addField(`24 hour uptime percentage:`, `${monitor.customuptimeratio[0]}%`)
+            .setFooter(`Powered by the "Discord + UptimeRobot" repo on GitHub.`)
             .setColor(monitColor)
           channelmsg.send({embed});
 
           logger.info(`----------------------------------------------`)
           logger.info(`${monitor.friendlyname} was tested by ${usernameMSG} on ${guildmsg.name}.`)
-          logger.info(`Status: ${monitStatus} | Today's uptime %: ${monitor.customuptimeratio[0]}`)
+          logger.info(`Status: ${monitStatus} | 24 hour uptime %: ${monitor.customuptimeratio[0]}`)
         break;
         default:
           var embed = new Discord.MessageEmbed()

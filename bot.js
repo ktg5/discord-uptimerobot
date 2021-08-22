@@ -99,7 +99,7 @@ bot.on('ready', function (evt) {
                         var monitStatus = botTools.monitorStatus(monitor.status);
                         var monitColor = botTools.embedColor(monitor.status);
                         var emojiStatus = botTools.emojiMsg(monitor.status);
-                        var monitType = botTools.monitorType(monitor.port);
+                        var monitType = botTools.monitorType(monitor.port, monitor.type);
                         
                         switch (monitor.status) {
                             case "9": 
@@ -111,8 +111,8 @@ bot.on('ready', function (evt) {
                                         .addField(`Type:`, monitType)
                                         .addField(`URL:`, monitor.url)
                                         .addField(`Status:`, monitStatus)
-                                        .addField(`Today's uptime percentage:`, `${monitor.customuptimeratio[0]}%`)
-                                        .setFooter(`Uptime detection by UptimeRobot.`)
+                                        .addField(`24 hour uptime percentage:`, `${monitor.customuptimeratio[0]}%`)
+                                        .setFooter(`Powered by the "Discord + UptimeRobot" repo on GitHub.`)
                                         .setColor(monitColor)
                                     targetChannel.send({embed});
 
@@ -129,8 +129,8 @@ bot.on('ready', function (evt) {
                                         .addField(`Type:`, monitType)
                                         .addField(`URL:`, monitor.url)
                                         .addField(`Status:`, monitStatus)
-                                        .addField(`Today's uptime percentage:`, `${monitor.customuptimeratio[0]}%`)
-                                        .setFooter(`Uptime detection by UptimeRobot.`)
+                                        .addField(`24 hour uptime percentage:`, `${monitor.customuptimeratio[0]}%`)
+                                        .setFooter(`Powered by the "Discord + UptimeRobot" repo on GitHub.`)
                                         .setColor(monitColor)
                                     targetChannel.send({embed});
 
@@ -155,13 +155,13 @@ bot.on('ready', function (evt) {
                             .addField(`Type:`, monitType)
                             .addField(`URL:`, monitor.url)
                             .addField(`Status:`, monitStatus)
-                            .addField(`Today's uptime percentage:`, `${monitor.customuptimeratio[0]}%`)
-                            .setFooter(`Uptime detection by UptimeRobot.`)
+                            .addField(`24 hour uptime percentage:`, `${monitor.customuptimeratio[0]}%`)
+                            .setFooter(`Powered by the "Discord + UptimeRobot" repo on GitHub.`)
                             .setColor(monitColor)
                         targetChannel.send({embed});
 
                         logger.info(`Monitor #${i + 1}: ${monitor.friendlyname}`)
-                        logger.info(`Status: ${monitStatus} | Today's uptime %: ${monitor.customuptimeratio[0]}`)
+                        logger.info(`Status: ${monitStatus} | 24 hour uptime %: ${monitor.customuptimeratio[0]}`)
                     });
                 }
             } else return 
