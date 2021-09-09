@@ -51,4 +51,4 @@ Search for your info.json and change the values in `"guild"` to your chosen guil
 
 For help with anything, [join our support server.](https://discord.gg/8QTX46D)
 
-For errors, [file an issue.](https://github.com/kt5company/discord-uptimerobot/issues)
+For bugs, [file an issue.](https://github.com/kt5company/discord-uptimerobot/issues)
