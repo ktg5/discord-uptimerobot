@@ -3,8 +3,6 @@ A Discord bot that uses UptimeRobot to detect if a service is down or not.
 
 This does require you to have a UptimeRobot account and setup monitors on your UptimeRobot account.
 
-## For those who are updating to v2 of this repo, PLEASE REDO THE INSTALLATION PROCESS BELOW.
-
 ## Installation process.
 ### Part 1 -- Getting started:
 1. Download the source by using `git clone https://github.com/kt5company/discord-uptimerobot` in a command prompt that has Git installed.
